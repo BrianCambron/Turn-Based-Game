@@ -107,6 +107,7 @@ body{
 
 
 
+
 .heropic {
 
   width: 60px;
@@ -117,6 +118,8 @@ body{
 position:relative;
 left: 90px;
 bottom: 450px;
+
+
 }
 
 .menu, .menu ul {
@@ -190,11 +193,11 @@ bottom: 450px;
 
     font-family: 'Lucida Console';
 
-    font-size: 18px;
+    font-size: 12px;
 
-    line-height: 54px;
+    line-height: 45px;
 
-    padding: 0 25px;
+    padding: 0 15px;
 
     text-decoration: none;
 
