@@ -16,6 +16,41 @@ enterBtn.addEventListener('click',function play(event){
 //     }
 
 
+const heros = [{
+    name: 'Knight',
+    health: 150,
+    attackPower: 10
+  },
+  {
+    name: 'Archer',
+    health: 125,
+    attackPower: 12
+  },
+  {
+    name: 'Wizard',
+    health: 100,
+    attackPower: 15
+  }
+];
+
+document.querySelectorAll('.hero').forEach(hero => {
+  hero.addEventListener('click', event => {
+    // console.log('here', hero);
+    const selectionValue = hero.dataset.type;
+    // console.log(selectionValue);
+    const selectedHero = heros.filter(hero => hero.name.toLowerCase() === selectionValue.toLowerCase())[0];
+    console.log(selectedHero);
+    game.hero = new Hero(selectedHero);
+    game.battle();
+  });
+});
+
+// hero1.addEventListener('click', event => {
+//   game.hero = new Hero(heros[0]);
+//   game.battle();
+// });
+
+
 class Player {
   constructor({
     name,
@@ -82,31 +117,22 @@ class Game {
   }
 
   setHero() {
-    var num = 3
-    let heros = [{
-        name: 'Knight',
-        health: 150,
-        attackPower: 10
-      },
-      {
-        name: 'Archer',
-        health: 125,
-        attackPower: 12
-      },
-      {
-        name: 'Wizard',
-        health: 100,
-        attackPower: 15
-      }
-    ];
-    if (num == 1 /*knight is selected*/ ) {
-      this.hero = new Hero(heros[0]);
-    } else if (num == 2 /*archer is selected*/ ) {
-      this.hero = new Hero(heros[1]);
-    } else if (num == 3 /*wizard is selected*/ ) {
-      this.hero = new Hero(heros[2]);
-    }
-    console.log(this.hero);
+    let num = 3
+
+    // if (num == 1 /*knight is selected*/ ) {
+    //   this.hero = new Hero(heros[0]);
+    // } else if (num == 2 /*archer is selected*/ ) {
+    //   this.hero = new Hero(heros[1]);
+    // } else if (num == 3 /*wizard is selected*/ ) {
+    //   this.hero = new Hero(heros[2]);
+    // }
+    // const hero1 = document.querySelector('.hero1');
+    // hero1.addEventListener('click', event => {
+    //   this.hero = new Hero(heros[0]);
+    //   // console.log(this);
+    //   this.battle();
+    // });
+      // console.log(this.hero);
   }
 
   setVillan() {
@@ -115,9 +141,17 @@ class Game {
   }
 
   battle() {
-
+    console.log(this.hero);
   }
 }
 
-var game = new Game();
-game.setHero();
+const hero1 = document.querySelector('.hero1');
+
+
+
+const game = new Game();
+
+
+
+
+// game.setHero();
