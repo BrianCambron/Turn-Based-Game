@@ -1,0 +1,40 @@
+/* body{
+  background: url('http://1.bp.blogspot.com/-OYww5Y6Pos4/UsScVSkdeRI/AAAAAAAAATg/GV-mCWjMjXI/s1600/dungeon+sketch+door+final.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+} */
+.top-nav {
+  text-align: center;
+  color: white;
+  margin-top: 50px;
+}
+
+.top-nav button {
+  margin-right: 15px;
+  margin-top: 10px;
+}
+
+.container::before {
+  animation: fade-slide-down 2s ease-out forwards;
+  background: url('http://1.bp.blogspot.com/-OYww5Y6Pos4/UsScVSkdeRI/AAAAAAAAATg/GV-mCWjMjXI/s1600/dungeon+sketch+door+final.jpg');
+  background-size: cover;
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+}
+
+@keyframes fade-slide-down {
+  0% {
+    opacity: 0;
+    transform: translateY(-4rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
