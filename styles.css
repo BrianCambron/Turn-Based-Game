@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 body{
   background: url('http://1.bp.blogspot.com/-OYww5Y6Pos4/UsScVSkdeRI/AAAAAAAAATg/GV-mCWjMjXI/s1600/dungeon+sketch+door+final.jpg');
   background-repeat: no-repeat;
@@ -115,8 +115,8 @@ body{
 .menu {
   display: inline-block;
 position:relative;
-left: 130px;
-top: 40px;
+left: 90px;
+bottom: 450px;
 }
 
 .menu, .menu ul {
