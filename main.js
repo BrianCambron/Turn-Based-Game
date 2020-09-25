@@ -1,10 +1,9 @@
 
 const enterBtn = document.querySelector('.enterBtn')
 enterBtn.addEventListener('click', function (event) {
-  var name = prompt('Enter your name!');
+  let name = prompt('Enter your name!');
   if (name != null) {
-    document.querySelector('.player-name').innerHTML =
-    'Welcome ' + name;
+    document.querySelector('.player-name').innerHTML = name;
   }
 });
 enterBtn.addEventListener('click',function play(event){

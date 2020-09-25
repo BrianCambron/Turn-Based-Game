@@ -15,15 +15,27 @@
 
       <h1>Would you like to enter the Dungeon?</h1>
       <button class="enterBtn btn btn-light">Enter</button>
-      <p class="player-name"></p>
       <audio loop id="audio" src="./audio/_audio_odyssey.mp3"></audio>
 
     </div>
-
+    <div class="enemies">
+      <div class="enemies-top">
+        <p>Ghoul</p>
+        <progress id="enemy-health-bar" value="50" max="100"></progress>
+      </div>
+      <img class="ghoul" src="https://1.bp.blogspot.com/-wgWRq7FZo1w/WI4o4B8QqiI/AAAAAAAAAhE/CIhuRT41-G82XZSou4XJrLXnx5pmS-h7gCLcB/s1600/Ghoul-5e.png" alt="ghoul">
+    </div>
+    <div class="heroes">
+      <div class="heroes-top">
+        <p class="player-name">Brian</p>
+        <progress id="hero-health-bar" value="50" max="100"></progress>
+      </div>
+      <img class="knight" src="https://andaryu3.files.wordpress.com/2014/06/brandishback.png" alt="knight">
+    </div>
   </div>
 
   <!-- ////////////////hero choose button////////////////// -->
-    <ul class="menu">
+  <!-- <ul class="menu">
       <li><a href="#s1">CHOOSE YOUR HERO</a>
 
             <ul class="submenu">
@@ -38,8 +50,7 @@
             </ul>
 
         </li>
-      </ul>
-    </header>
+      </ul> -->
 
   <script src="./main.js"></script>
 </body>

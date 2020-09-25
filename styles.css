@@ -1,20 +1,23 @@
-/* body{
+body{
   background: url('http://1.bp.blogspot.com/-OYww5Y6Pos4/UsScVSkdeRI/AAAAAAAAATg/GV-mCWjMjXI/s1600/dungeon+sketch+door+final.jpg');
   background-repeat: no-repeat;
   background-size: cover;
-} */
+  /* animation: fade-slide-down 2s ease-out forwards; */
+}
 .top-nav {
   text-align: center;
   color: white;
   margin-top: 50px;
+  animation: fade-slide-down 2s ease-out forwards;
 }
 
 .top-nav button {
   margin-right: 15px;
   margin-top: 10px;
+  margin-bottom: 15px;
 }
 
-.container::before {
+/* .container::before {
   animation: fade-slide-down 2s ease-out forwards;
   background: url('http://1.bp.blogspot.com/-OYww5Y6Pos4/UsScVSkdeRI/AAAAAAAAATg/GV-mCWjMjXI/s1600/dungeon+sketch+door+final.jpg');
   background-size: cover;
@@ -25,6 +28,48 @@
   left: 0;
   right: 0;
   z-index: -1;
+} */
+.enemies{
+  display: flex;
+  justify-content: flex-end;
+}
+.enemies-top{
+  display: flex;
+  color: white;
+  width: 888px;
+  height: 40px;
+  justify-content: flex-end;
+}
+.enemies-top p{
+  margin-right: 20px
+}
+#enemy-health-bar{
+  margin-top: 4px;
+}
+.ghoul{
+  width: 15%;
+  /* margin-right: 20%; */
+  animation-name: slide-in-left;
+  animation-duration: 3s;
+}
+.heroes{
+  margin-left: 20%;
+}
+.heroes-top{
+  display: flex;
+}
+#hero-health-bar{
+  margin-top: 4px;
+}
+.player-name{
+  color: white;
+  margin-right: 20px;
+}
+.knight{
+  width: 20%;
+  /* margin-left: 20%; */
+  animation-name: slide-in-right;
+  animation-duration: 3s;
 }
 
 @keyframes fade-slide-down {
@@ -38,7 +83,22 @@
     transform: none;
   }
 }
-
+@keyframes slide-in-right{
+  0%{
+    transform: translateX(-100%);
+  }
+  100%{
+    transform: translateX(0%)
+  }
+}
+@keyframes slide-in-left{
+  0%{
+    transform: translateX(100%);
+  }
+  100%{
+    transform: translateX(0%);
+  }
+}
 /* hero choose button below...................................... */
 
 .heropic {
