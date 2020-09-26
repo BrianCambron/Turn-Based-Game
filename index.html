@@ -18,17 +18,29 @@
       <audio loop id="audio" src="./audio/_audio_odyssey.mp3"></audio>
 
     </div>
+    <div class="menu-div">
+      <ul class="menu">
+        <li><a class="chooseHero" href="#s1">CHOOSE YOUR HERO</a>
+
+          <ul class="submenu">
+            <li><a data-type='knight' class="hero" href="#"><img class="heropic" src="./images/hero-1.jpg"> KNIGHT</a></li>
+            <li><a data-type='archer' class="hero" href="#"><img class="heropic" src="./images/archer.jpg"> ARCHER</a></li>
+            <li><a data-type='wizard' class="hero" href="#"><img class="heropic" src="./images/wizard.jpg"> WIZARD</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
     <div class="enemies">
       <div class="enemies-top">
         <p>Ghoul</p>
-        <progress id="enemy-health-bar" value="50" max="100"></progress>
+        <progress id="enemy-health-bar" value="100" max="100"></progress>
       </div>
       <img class="ghoul" src="https://1.bp.blogspot.com/-wgWRq7FZo1w/WI4o4B8QqiI/AAAAAAAAAhE/CIhuRT41-G82XZSou4XJrLXnx5pmS-h7gCLcB/s1600/Ghoul-5e.png" alt="ghoul">
     </div>
     <div class="heroes">
       <div class="heroes-top">
         <p class="player-name">Brian</p>
-        <progress id="hero-health-bar" value="50" max="100"></progress>
+        <progress id="hero-health-bar" value="100" max="100"></progress>
       </div>
       <img class="knight" src="https://andaryu3.files.wordpress.com/2014/06/brandishback.png" alt="knight">
     </div>
@@ -64,6 +76,7 @@
 
   <button class="push--flat attack"></button>
   <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+
   <script src="./main.js"></script>
 </body>
 

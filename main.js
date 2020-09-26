@@ -10,6 +10,8 @@ enterBtn.addEventListener('click', function (event) {
 enterBtn.addEventListener('click',function play(event){
         let audio = document.getElementById("audio");
         audio.play();
+        let topnav = document.  querySelector('.top-nav')
+        topnav.style.display ='none';
 });
 
 
@@ -152,13 +154,20 @@ class Game {
   }
 }
 
-const hero1 = document.querySelector('.hero1');
-
 
 
 const game = new Game();
+// let herohealth = document.getElementById("hero-health-bar")
+// herohealth.value -= 10;
+// let enemyhealth = document.getElementById("enemy-health-bar")
+// enemyhealth.value -= 10;
 
-
-
-
+  document.querySelectorAll('.hero').forEach(hero => {
+  hero.addEventListener('click', event => {
+      let menu = document.querySelector('.menu');
+      let topnav = document.querySelector('.top-nav')
+      menu.style.display = "none";
+      topnav.style.display ='block';
+  });
+});
 // game.setHero();
