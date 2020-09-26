@@ -231,10 +231,16 @@ document.querySelectorAll('.hero').forEach(heroInfo => {
     hero = new Hero(selectedHero);
     if (heroInfo.dataset.type === 'knight') {
       document.querySelector('#character').src = "./images/transparentKnight.png"
+      document.querySelector('#hero-health-bar').max = 150;
+      document.querySelector('#hero-health-bar').value = 150;
     } else if (heroInfo.dataset.type === 'archer') {
       document.querySelector('#character').src = "./images/transparentArcher.png"
+      document.querySelector('#hero-health-bar').max = 125;
+      document.querySelector('#hero-health-bar').value = 125;
     } else if (heroInfo.dataset.type === 'wizard') {
       document.querySelector('#character').src = "./images/transparentWizard.png"
+      document.querySelector('#hero-health-bar').max = 100;
+      document.querySelector('#hero-health-bar').value = 100;
     }
   });
 });
