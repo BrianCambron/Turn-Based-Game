@@ -15,6 +15,8 @@ enterBtn.addEventListener('click',function play(event){
         enemydiv.style.display = 'flex';
         let herodiv = document.querySelector('.heroes');
         herodiv.style.display = 'block';
+        attBtn = document.querySelector(".attack");
+        attBtn.style.display = "inline-block";
 });
 
 
