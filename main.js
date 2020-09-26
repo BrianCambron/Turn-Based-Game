@@ -225,11 +225,11 @@ document.querySelectorAll('.hero').forEach(heroInfo => {
     console.log(selectedHero);
     hero = new Hero(selectedHero);
     if (heroInfo.dataset.type === 'knight'){
-      document.querySelector('#character').src = "./images/knight-battle.jpg"
+      document.querySelector('#character').src = "./images/transparentKnight.png"
     } else if (heroInfo.dataset.type === 'archer') {
-    document.querySelector('#character').src = "./images/archer-battle.jpg"
+    document.querySelector('#character').src = "./images/transparentArcher.png"
   } else if (heroInfo.dataset.type === 'wizard') {
-    document.querySelector('#character').src = "./images/wizard-battle.jpg"
+    document.querySelector('#character').src = "./images/transparentWizard.png"
     }
   });
 });
