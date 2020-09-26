@@ -121,7 +121,7 @@ body {
 .menu {
   display: inline-block;
   position: relative;
-  left: 40%;
+  left: 40.7%;
 }
 
 .menu, .menu ul {
@@ -285,7 +285,7 @@ body {
 
 .push--flat {
   position:relative;
-  left: 42%;
+  left: 41.3%;
   color: #ccc;
   font: normal 3vw/1 'Montserrat', sans-serif;
   text-align: center;
