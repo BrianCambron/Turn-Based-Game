@@ -17,8 +17,6 @@ enterBtn.addEventListener('click', function play(event) {
   attBtn = document.querySelector(".attack");
   attBtn.style.display = "inline-block";
 });
-
-
 const herosArr = [{
     name: 'Knight',
     health: 150,
@@ -35,7 +33,6 @@ const herosArr = [{
     attackPower: 15
   }
 ];
-
 const henchmenArr = [{
     name: 'Ghoul',
     health: 10,
@@ -53,7 +50,6 @@ const henchmenArr = [{
     health: 50,
   }
 ];
-
 document.querySelectorAll('.hero').forEach(heroInfo => {
   heroInfo.addEventListener('click', event => {
     // console.log('here', hero);
@@ -65,10 +61,6 @@ document.querySelectorAll('.hero').forEach(heroInfo => {
     battle();
   });
 });
-
-
-
-
 class Player {
   constructor({
     name,
@@ -78,7 +70,6 @@ class Player {
     this.health = health;
   }
 }
-
 class Hero extends Player {
   constructor({
     name,
@@ -96,7 +87,6 @@ class Hero extends Player {
     console.log(player);
   }
 }
-
 class Villan extends Player {
   constructor({
     name,
@@ -108,7 +98,6 @@ class Villan extends Player {
     });
   }
 }
-
 class Henchman extends Villan {
   constructor({
     name,
@@ -140,21 +129,27 @@ class Boss extends Villan {
     console.log(player);
   }
 }
-
 function newHench(){
   return henchman = new Henchman(henchmenArr[Math.floor(Math.random() * 4)]);
+  // let enemyname = henchman.name;
+  // document.querySelector('.enemy-name').innerHTML = enemyname;
+  // if (henchman.name === 'Ghoul') {
+  //   document.querySelector('.enemy').src = "https://1.bp.blogspot.com/-wgWRq7FZo1w/WI4o4B8QqiI/AAAAAAAAAhE/CIhuRT41-G82XZSou4XJrLXnx5pmS-h7gCLcB/s1600/Ghoul-5e.png"
+  // } else if (henchman.name === 'Orc') {
+  //   document.querySelector('.enemy').src = "./images/org.png"
+  // } else if (henchman.name === 'Dark Elf') {
+  //   document.querySelector('.enemy').src = "./images/dark-elf.png"
+  // } else if (henchman.name === 'Troll') {
+  //   document.querySelector('.enemy').src = "./images/troll.png"
+  // }
 }
+const dragon = new Boss({name: 'Dragon', health: 100});
 // console.log(newHench());
-function dungeon(){
-  battle();
-}
-
-function addC(){
-  let counter = 0;
-  if()
-}
-function battle() {
-  newHench();
+// function addC(){
+//   let counter = 0;
+//   if()
+// }
+function currentHench(henchman){
   let enemyname = henchman.name;
   document.querySelector('.enemy-name').innerHTML = enemyname;
   if (henchman.name === 'Ghoul') {
@@ -166,8 +161,16 @@ function battle() {
   } else if (henchman.name === 'Troll') {
     document.querySelector('.enemy').src = "./images/troll.png"
   }
+}
+let counter = 0;
+function battle() {
+  newHench();
+  currentHench(henchman);
   const attackButton = document.querySelector('.attack');
   attackButton.addEventListener('click', event => {
+    if(counter < 4){
+      currentHench(henchman);
+    console.log(counter);
     hero.attack(henchman);
     henchman.attack(hero);
     if (hero.health <= 0) {
@@ -176,73 +179,42 @@ function battle() {
     } else if (henchman.health <= 0) {
       console.log('Enemy has been defeated!');
       newHench();
-      // attackButton.style.display = "none";
-      // let enemydiv = document.querySelector('.enemies');
-      // enemydiv.style.display = 'none';
-      // let playagain = document.querySelector('.play-button');
-      // playagain.style.display = 'inline-block';
-      // playagain.addEventListener('click', event =>{
-      //   location.reload();
-      //   return false;
-      // })
-      // let winAudio = document.querySelector('.winAudio');
-      // audio.pause();
-      // winAudio.play();
+      counter += 1;
     }
-
+    }
+    else{
+      document.querySelector('.enemy-name').innerHTML = 'Dragon';
+      document.querySelector('.enemy').src = "./images/dragon.png"
+      hero.attack(dragon);
+      dragon.attack(hero);
+      if (hero.health <= 0) {
+        console.log('You have been defeated!')
+        attackButton.style.display = "none";
+        let playagain = document.querySelector('.play-button');
+        playagain.style.display = 'inline-block';
+        playagain.addEventListener('click', event =>{
+          location.reload();
+          return false;
+        })
+        let loseAudio = document.querySelector('.loseAudio');
+        audio.pause();
+        loseAudio.play();
+      } else if (dragon.health <= 0) {
+        console.log('YOU WIN!');
+        attackButton.style.display = "none";
+        let playagain = document.querySelector('.play-button');
+        playagain.style.display = 'inline-block';
+        playagain.addEventListener('click', event =>{
+          location.reload();
+          return false;
+        })
+        let winAudio = document.querySelector('.winAudio');
+        audio.pause();
+        winAudio.play();
+    }
+  }
   });
 }
-
-
-// class Game {
-//   constructor() {
-//
-//   }
-//
-//   setHero() {
-//     var num = 3
-//     let heros = [{
-//         name: 'Knight',
-//         health: 150,
-//         attackPower: 10
-//       },
-//       {
-//         name: 'Archer',
-//         health: 125,
-//         attackPower: 12
-//       },
-//       {
-//         name: 'Wizard',
-//         health: 100,
-//         attackPower: 15
-//       }
-//     ];
-//     if (num == 1 /*knight is selected*/ ) {
-//       this.hero = new Hero(heros[0]);
-//     } else if (num == 2 /*archer is selected*/ ) {
-//       this.hero = new Hero(heros[1]);
-//     } else if (num == 3 /*wizard is selected*/ ) {
-//       this.hero = new Hero(heros[2]);
-//     }
-//
-//   }
-//
-//   setVillan() {
-//     villans
-//     this.villan = new(villans[0]);
-//   }
-//
-//   battle() {
-//     console.log(this.hero);
-//   }
-// }
-//
-// const hero1 = document.querySelector('.hero1');
-//
-//
-//
-// const game = new Game();
-
 document.querySelectorAll('.hero').forEach(hero => {
   hero.addEventListener('click', event => {
     let menu = document.querySelector('.menu');
