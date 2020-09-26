@@ -206,20 +206,13 @@ document.querySelectorAll('.hero').forEach(heroInfo => {
     const selectionValue = heroInfo.dataset.type;
     const selectedHero = herosArr.filter(heroInfo => heroInfo.name.toLowerCase() === selectionValue.toLowerCase())[0];
     console.log(selectedHero);
-    if (heroInfo.dataset.type === 'knight'){
-      document.querySelector('knight').src = './images/archer-battle.jpg'
-    } else if (heroInfo.dataset.type === 'archer') {
-    document.querySelector('archer').src = './images/knight-battle.jpg'
-    } else {
-    document.querySelector('wizard').src = './images/wizard-battle.jpg'
-    }
     hero = new Hero(selectedHero);
+    if (heroInfo.dataset.type === 'knight'){
+      document.querySelector('#character').src = "./images/knight-battle.jpg"
+    } else if (heroInfo.dataset.type === 'archer') {
+    document.querySelector('#character').src = "./images/archer-battle.jpg"
+  } else if (heroInfo.dataset.type === 'wizard') {
+    document.querySelector('#character').src = "./images/wizard-battle.jpg"
+    }
   });
 });
-// if (heroInfo.dataset.type === 'knight'){
-//   document.querySelector('knight').src = './images/archer-battle.jpg'
-// } else if (heroInfo.dataset.type === 'archer') {
-// document.querySelector('archer').src = './images/knight-battle.jpg'
-// } else if (heroInfo.dataset.type === 'wizard' {
-// document.querySelector('wizard').src = './images/wizard-battle.jpg'
-// }

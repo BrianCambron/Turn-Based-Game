@@ -68,7 +68,7 @@ body {
   margin-right: 20px;
 }
 
-.knight {
+#character {
   width: 20%;
   /* margin-left: 20%; */
   animation-name: slide-in-right;
