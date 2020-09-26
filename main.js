@@ -9,11 +9,11 @@ enterBtn.addEventListener('click', function (event) {
 enterBtn.addEventListener('click',function play(event){
         let audio = document.getElementById("audio");
         audio.play();
-        let topnav = document.querySelector('.top-nav')
+        let topnav = document.querySelector('.top-nav');
         topnav.style.display = 'none';
-        let enemydiv = document.querySelector('.enemies')
+        let enemydiv = document.querySelector('.enemies');
         enemydiv.style.display = 'flex';
-        let herodiv = document.querySelector('.heroes')
+        let herodiv = document.querySelector('.heroes');
         herodiv.style.display = 'block';
 });
 
@@ -153,6 +153,8 @@ function battle() {
   } else if(henchman.health <= 0) {
     console.log('Enemy has been defeated!')
     attackButton.style.display = "none";
+    let enemydiv = document.querySelector('.enemies');
+    enemydiv.style.display = 'none';
   }
 
 });
