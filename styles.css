@@ -113,6 +113,8 @@ body {
   background: grey;
 }
 
+
+
 .menu {
   display: inline-block;
   position: relative;
@@ -155,8 +157,8 @@ body {
   display: block;
   font-family: 'Lucida Console';
   font-size: 12px;
-  line-height: 45px;
-  padding: 0 15px;
+  line-height: 70px;
+  padding: 0 40px;
   text-decoration: none;
   text-transform: uppercase;
 }
@@ -280,7 +282,7 @@ body {
 
 .push--flat {
   position:relative;
-  left:374px;
+  left:541px;
   color: #ccc;
   font: normal 3vw/1 'Montserrat', sans-serif;
   text-align: center;
