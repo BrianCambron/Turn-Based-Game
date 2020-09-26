@@ -1,7 +1,7 @@
 
 const enterBtn = document.querySelector('.enterBtn')
 enterBtn.addEventListener('click', function (event) {
-  var name = prompt('Enter your name!');
+  let name = prompt('Enter your name!');
   if (name != null) {
     document.querySelector('.player-name').innerHTML = name;
   }
@@ -9,8 +9,12 @@ enterBtn.addEventListener('click', function (event) {
 enterBtn.addEventListener('click',function play(event){
         let audio = document.getElementById("audio");
         audio.play();
-        let topnav = document.  querySelector('.top-nav')
-        topnav.style.display ='none';
+        let topnav = document.querySelector('.top-nav')
+        topnav.style.display = 'none';
+        let enemydiv = document.querySelector('.enemies')
+        enemydiv.style.display = 'flex';
+        let herodiv = document.querySelector('.heroes')
+        herodiv.style.display = 'block';
 });
 
 
@@ -127,7 +131,18 @@ class Boss extends Villan {
 
 function battle() {
   const henchman = new Henchman(henchmenArr[Math.floor(Math.random() * 4)]);
-
+  let enemyname = henchman.name;
+  document.querySelector('.enemy-name').innerHTML = enemyname;
+  if (henchman.name === 'Ghoul') {
+    document.querySelector('.enemy').src="https://1.bp.blogspot.com/-wgWRq7FZo1w/WI4o4B8QqiI/AAAAAAAAAhE/CIhuRT41-G82XZSou4XJrLXnx5pmS-h7gCLcB/s1600/Ghoul-5e.png"
+  }
+  else if (henchman.name === 'Orc') {
+    document.querySelector('.enemy').src="./images/org.png"
+  } else if (henchman.name === 'Dark Elf') {
+    document.querySelector('.enemy').src="./images/dark-elf.png"
+  } else if (henchman.name === 'Troll') {
+    document.querySelector('.enemy').src="./images/troll.png"
+  }
   const attackButton = document.querySelector('.attack');
   attackButton.addEventListener('click', event => {
   hero.attack(henchman);
