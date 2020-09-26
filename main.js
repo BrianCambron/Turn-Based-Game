@@ -3,8 +3,7 @@ const enterBtn = document.querySelector('.enterBtn')
 enterBtn.addEventListener('click', function (event) {
   var name = prompt('Enter your name!');
   if (name != null) {
-    document.querySelector('.player-name').innerHTML =
-    'Welcome ' + name;
+    document.querySelector('.player-name').innerHTML = name;
   }
 });
 enterBtn.addEventListener('click',function play(event){
@@ -202,3 +201,25 @@ function battle() {
       topnav.style.display ='block';
   });
 });
+document.querySelectorAll('.hero').forEach(heroInfo => {
+  heroInfo.addEventListener('click', event => {
+    const selectionValue = heroInfo.dataset.type;
+    const selectedHero = herosArr.filter(heroInfo => heroInfo.name.toLowerCase() === selectionValue.toLowerCase())[0];
+    console.log(selectedHero);
+    if (heroInfo.dataset.type === 'knight'){
+      document.querySelector('knight').src = './images/archer-battle.jpg'
+    } else if (heroInfo.dataset.type === 'archer') {
+    document.querySelector('archer').src = './images/knight-battle.jpg'
+    } else {
+    document.querySelector('wizard').src = './images/wizard-battle.jpg'
+    }
+    hero = new Hero(selectedHero);
+  });
+});
+// if (heroInfo.dataset.type === 'knight'){
+//   document.querySelector('knight').src = './images/archer-battle.jpg'
+// } else if (heroInfo.dataset.type === 'archer') {
+// document.querySelector('archer').src = './images/knight-battle.jpg'
+// } else if (heroInfo.dataset.type === 'wizard' {
+// document.querySelector('wizard').src = './images/wizard-battle.jpg'
+// }
