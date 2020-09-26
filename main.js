@@ -155,6 +155,9 @@ function battle() {
     attackButton.style.display = "none";
     let enemydiv = document.querySelector('.enemies');
     enemydiv.style.display = 'none';
+    let winAudio = document.querySelector('.winAudio');
+    audio.pause();
+    winAudio.play();
   }
 
 });
