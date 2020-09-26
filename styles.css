@@ -18,7 +18,8 @@ body {
   margin-top: 10px;
   margin-bottom: 15px;
 }
-.menu-div{
+
+.menu-div {
   margin-top: 5%;
 }
 
@@ -115,8 +116,6 @@ body {
   width: 60px;
   background: grey;
 }
-
-
 
 .menu {
   display: inline-block;
@@ -278,18 +277,17 @@ body {
 }
 
 /* ////////////////////ATTACK BUTTON/////////////////////////// */
-
-
-.push--flat:focus {outline:0;}
+.push--flat:focus {
+  outline: 0;
+}
 
 .push--flat {
-  position:relative;
+  position: relative;
   left: 41.3%;
   color: #ccc;
   font: normal 3vw/1 'Montserrat', sans-serif;
   text-align: center;
   text-transform: uppercase;
-
 }
 
 [class*="push"] {
@@ -309,11 +307,13 @@ body {
 .push--flat {
   box-shadow: inset 0 7.5px 0 #da2e0b, inset 0 -7.5px 0 #aa2409, inset 0 0 0 7.5px #b32609, inset 0 0 0 20px #c2290a, inset 0 0 0 24px #611405, inset 0 0 0 26.0869565217px black, inset 0 0 0 32px rgba(247, 133, 110, 0.7), inset 0 0 0 43.6363636364px #c2290a, inset 0 96px 32px #aa2409, inset 0 0 24px 40px #911f08, 0 12px 0 rgba(0, 0, 0, 0.3);
 }
+
 /*  */
 .push--flat:active, .push--flat.is-pushed {
   box-shadow: inset 0 7.5px 0 #da2e0b, inset 0 -7.5px 0 #aa2409, inset 0 0 0 7.5px #b32609, inset 0 0 0 20px #c2290a, inset 0 0 0 24px #611405, inset 0 0 0 28.2352941176px black, inset 0 0 0 32px rgba(247, 133, 110, 0.2), inset 0 0 0 43.6363636364px #b32609, inset 0 96px 32px #9b2108, inset 0 0 24px 40px #791a06, 0 12px 0 rgba(0, 0, 0, 0.3);
   background-color: #b8270a;
 }
+
 .push--flat:active:after, .push--flat.is-pushed:after {
   bottom: 28px;
   border-width: none;
@@ -322,13 +322,16 @@ body {
 .push--skeuo {
   box-shadow: inset 0 10px 0 #da2e0b, inset 0 -10px 4px #aa2409, 0 0 4px #c2290a, inset 0 0 8px #791a06, inset 0 0 8px rgba(51, 51, 51, 0.5), inset 0 0 4px 20px #c2290a, inset 0 -8px 6px 24px rgba(51, 51, 51, 0.7), inset 0 0 4px 24px #611405, inset 0 0 4px 24px rgba(51, 51, 51, 0.7), inset 0 0 2px 26.0869565217px black, inset 0 0 2px 30px rgba(247, 133, 110, 0.7), inset 0 12px 0 28.2352941176px rgba(244, 71, 37, 0.7), inset 0 -12px 4px 28.2352941176px rgba(145, 31, 8, 0.2), inset 0 0 0 43.6363636364px #c2290a, inset 0 96px 32px #aa2409, inset 0 0 24px 40px #911f08, 0 6px 12px rgba(0, 0, 0, 0.5);
 }
+
 .push--skeuo:active, .push--skeuo.is-pushed {
   box-shadow: inset 0 10px 0 #da2e0b, inset 0 -10px 4px #aa2409, 0 0 4px #c2290a, inset 0 0 8px #791a06, inset 0 0 8px rgba(51, 51, 51, 0.5), inset 0 0 4px 20px #c2290a, inset 0 -8px 6px 24px rgba(51, 51, 51, 0.7), inset 0 0 4px 24px #611405, inset 0 0 4px 24px rgba(51, 51, 51, 0.7), inset 0 0 6px 28.2352941176px black, inset 0 0 2px 32px rgba(247, 133, 110, 0.2), inset 0 12px 0 28px rgba(244, 71, 37, 0.5), inset 0 -12px 4px 28px rgba(97, 20, 5, 0.2), inset 0 0 0 43.6363636364px #b32609, inset 0 96px 32px #9b2108, inset 0 0 24px 40px #791a06, 0 6px 12px rgba(0, 0, 0, 0.5);
   background-color: #b8270a;
 }
+
 .push--skeuo:active:before, .push--skeuo.is-pushed:before {
   opacity: .5;
 }
+
 .push--skeuo:before {
   content: '';
   position: absolute;
@@ -344,57 +347,52 @@ body {
 }
 
 /* ////////////////////////////////////////////play again button///////////////////////////////////////////////// */
-
-.button{
-  position:relative;
-  display:inline-block;
+.play-button {
+  position: relative;
+  display: none;
   left: 43.4%;
 }
 
-.button a{
-  color:white;
-  font-family:Helvetica, sans-serif;
-  font-weight:bold;
-  font-size:25px;
+.play-button a {
+  color: white;
+  font-family: Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 25px;
   text-align: center;
-  text-decoration:none;
-  background-color:red;
-  display:block;
-  position:relative;
-  padding:5px 7px;
-
+  text-decoration: none;
+  background-color: red;
+  display: block;
+  position: relative;
+  padding: 5px 7px;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   text-shadow: 0px 1px 0px #000;
   filter: dropshadow(color=#000, offx=0px, offy=1px);
-
-  -webkit-box-shadow:inset 0 1px 0 #FFE5C4, 0 10px 0 #915100;
-  -moz-box-shadow:inset 0 1px 0 #FFE5C4, 0 10px 0 #915100;
-  box-shadow:inset 0 1px 0 #FFE5C4, 0 10px 0 #915100;
-
+  -webkit-box-shadow: inset 0 1px 0 #FFE5C4, 0 10px 0 #915100;
+  -moz-box-shadow: inset 0 1px 0 #FFE5C4, 0 10px 0 #915100;
+  box-shadow: inset 0 1px 0 #FFE5C4, 0 10px 0 #915100;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
 }
 
-.button a:active{
-  top:10px;
-  background-color:#F78900;
-
-  -webkit-box-shadow:inset 0 1px 0 #FFE5C4, inset 0 -3px 0 #915100;
-  -moz-box-shadow:inset 0 1px 0 #FFE5C4, inset 0 -3pxpx 0 #915100;
-  box-shadow:inset 0 1px 0 #FFE5C4, inset 0 -3px 0 #915100;
+.play-button a:active {
+  top: 10px;
+  background-color: #F78900;
+  -webkit-box-shadow: inset 0 1px 0 #FFE5C4, inset 0 -3px 0 #915100;
+  -moz-box-shadow: inset 0 1px 0 #FFE5C4, inset 0 -3pxpx 0 #915100;
+  box-shadow: inset 0 1px 0 #FFE5C4, inset 0 -3px 0 #915100;
 }
 
-.button:after{
-  content:"";
-  height:100%;
-  width:100%;
-  padding:4px;
+.play-button:after {
+  content: "";
+  height: 100%;
+  width: 100%;
+  padding: 4px;
   position: absolute;
-  bottom:-15px;
-  left:-4px;
-  z-index:-1;
-  background-color:#2B1800;
+  bottom: -15px;
+  left: -4px;
+  z-index: -1;
+  background-color: #2B1800;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
