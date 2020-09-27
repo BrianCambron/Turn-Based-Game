@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 const enterBtn = document.querySelector('.enterBtn')
 enterBtn.addEventListener('click', function(event) {
   let name = prompt('Enter your name!');
@@ -87,6 +85,8 @@ class Hero extends Player {
   attack(player) {
     player.health -= this.attackPower;
     console.log(player);
+    document.querySelector('#enemy-health-bar').value = player.health;
+
   }
 }
 class Villan extends Player {
@@ -129,21 +129,11 @@ class Boss extends Villan {
   attack(player) {
     player.health -= Math.floor(Math.random() * 21);
     console.log(player);
+    document.querySelector('#hero-health-bar').value = player.health;
   }
 }
 function newHench(){
   return henchman = new Henchman(henchmenArr[Math.floor(Math.random() * 4)]);
-  // let enemyname = henchman.name;
-  // document.querySelector('.enemy-name').innerHTML = enemyname;
-  // if (henchman.name === 'Ghoul') {
-  //   document.querySelector('.enemy').src = "https://1.bp.blogspot.com/-wgWRq7FZo1w/WI4o4B8QqiI/AAAAAAAAAhE/CIhuRT41-G82XZSou4XJrLXnx5pmS-h7gCLcB/s1600/Ghoul-5e.png"
-  // } else if (henchman.name === 'Orc') {
-  //   document.querySelector('.enemy').src = "./images/org.png"
-  // } else if (henchman.name === 'Dark Elf') {
-  //   document.querySelector('.enemy').src = "./images/dark-elf.png"
-  // } else if (henchman.name === 'Troll') {
-  //   document.querySelector('.enemy').src = "./images/troll.png"
-  // }
 }
 const dragon = new Boss({name: 'Dragon', health: 100});
 // console.log(newHench());
@@ -156,12 +146,20 @@ function currentHench(henchman){
   document.querySelector('.enemy-name').innerHTML = enemyname;
   if (henchman.name === 'Ghoul') {
     document.querySelector('.enemy').src = "https://1.bp.blogspot.com/-wgWRq7FZo1w/WI4o4B8QqiI/AAAAAAAAAhE/CIhuRT41-G82XZSou4XJrLXnx5pmS-h7gCLcB/s1600/Ghoul-5e.png"
+    document.querySelector('#enemy-health-bar').max = 10;
+    document.querySelector('#enemy-health-bar').value = 10;
   } else if (henchman.name === 'Orc') {
     document.querySelector('.enemy').src = "./images/org.png"
+    document.querySelector('#enemy-health-bar').max = 20;
+    document.querySelector('#enemy-health-bar').value = 20;
   } else if (henchman.name === 'Dark Elf') {
     document.querySelector('.enemy').src = "./images/dark-elf.png"
+    document.querySelector('#enemy-health-bar').max = 30;
+    document.querySelector('#enemy-health-bar').value = 30;
   } else if (henchman.name === 'Troll') {
     document.querySelector('.enemy').src = "./images/troll.png"
+    document.querySelector('#enemy-health-bar').max = 40;
+    document.querySelector('#enemy-health-bar').value = 40;
   }
 }
 let counter = 0;
@@ -187,6 +185,8 @@ function battle() {
     else{
       document.querySelector('.enemy-name').innerHTML = 'Dragon';
       document.querySelector('.enemy').src = "./images/dragon.png"
+      document.querySelector('#enemy-health-bar').max = 100;
+      document.querySelector('#enemy-health-bar').value = 100;
       hero.attack(dragon);
       dragon.attack(hero);
       if (hero.health <= 0) {
@@ -246,4 +246,3 @@ document.querySelectorAll('.hero').forEach(heroInfo => {
     }
   });
 });
->>>>>>> hero health bar is kinda dynamic
